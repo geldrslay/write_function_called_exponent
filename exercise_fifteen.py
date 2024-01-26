@@ -3,12 +3,17 @@
 
 # Defining function
 def calculate_exponent (base, exponent):
-    if exponent == 0:
+    if type (exponent) == int and exponent <0:
+        print ("Please enter a non-negative exponent")    
+    elif exponent == 0:
         return 1
     else:
-        result = base ** exponent
+        return base ** exponent
 
 # Ask user to input base and exponent. 
 base = int(input ("Enter base:"))
-exponent = int (input ("Enter non-negative exponent"))
+exponent = int (input ("Enter non-negative exponent:"))
+
+# Display the result 
+print (base, "raised to the power of", exponent, "is:",calculate_exponent(base, exponent))
 
